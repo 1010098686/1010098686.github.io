@@ -5,15 +5,23 @@
   
 
   
-  <title>Hexo</title>
+  <title>SENet | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Squeeze-and-Excitation NetworksIntroduction最近的工作都是通过引入不需要额外监督信息就可以获得更好的空间信息的的方法来提升网络的性能，例如Inception network引入多尺度信息。而SENet的目标是通过建模卷积通道之间的依赖关系来加强网络的表示能力，提出了一种特征重标定策略，通过学习到全局信息来加强有用的特征并抑制无用的特征。  对于一个给定的变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SENet">
+<meta property="og:url" content="http://yoursite.com/2018/06/30/SENet/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Squeeze-and-Excitation NetworksIntroduction最近的工作都是通过引入不需要额外监督信息就可以获得更好的空间信息的的方法来提升网络的性能，例如Inception network引入多尺度信息。而SENet的目标是通过建模卷积通道之间的依赖关系来加强网络的表示能力，提出了一种特征重标定策略，通过学习到全局信息来加强有用的特征并抑制无用的特征。  对于一个给定的变">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/SENet/img1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/SENet/img2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/SENet/img3.jpg">
+<meta property="og:updated_time" content="2018-06-30T05:43:58.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="SENet">
+<meta name="twitter:description" content="Squeeze-and-Excitation NetworksIntroduction最近的工作都是通过引入不需要额外监督信息就可以获得更好的空间信息的的方法来提升网络的性能，例如Inception network引入多尺度信息。而SENet的目标是通过建模卷积通道之间的依赖关系来加强网络的表示能力，提出了一种特征重标定策略，通过学习到全局信息来加强有用的特征并抑制无用的特征。  对于一个给定的变">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/30/SENet/SENet/img1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-SENet" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-SENet" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/06/30/SENet/" class="article-date">
   <time datetime="2018-06-30T05:42:47.000Z" itemprop="datePublished">2018-06-30</time>
@@ -75,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/30/SENet/">SENet</a>
+    <h1 class="article-title" itemprop="name">
+      SENet
     </h1>
   
 
@@ -105,104 +111,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-vimrc" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/07/vimrc/" class="article-date">
-  <time datetime="2018-06-07T04:55:34.000Z" itemprop="datePublished">2018-06-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/07/vimrc/">vimrc</a>
-    </h1>
+    <a href="/2018/06/07/vimrc/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vimrc</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>“set fileencodings=ucs-bom,utf-8,utf-16,gb2312,gbk,gb18030,latin1</p>
-<p>set nocompatible<br>filetype off<br>set rtp+=~/.vim/bundle/Vundle.vim<br>call vundle#begin()</p>
-<p>Plugin ‘VundleVim/Vundle.vim’<br>Plugin ‘tomasr/molokai’<br>Plugin ‘Lokaltog/vim-powerline’<br>Plugin ‘Yggdroot/indentLine’<br>Plugin ‘jiangmiao/auto-pairs’<br>Plugin ‘Valloric/YouCompleteMe’</p>
-<p>call vundle#end()<br>filetype plugin indent on<br>color molokai</p>
-<p>set number numberwidth=5<br>“set mouse=a<br>set cmdheight=1<br>set laststatus=2</p>
-<p>set showcmd<br>autocmd BufEnter * silent! lcd %:p:h</p>
-<p>set incsearch hlsearch<br>set showmatch matchpairs+=&lt;:&gt;</p>
-<p>set shiftwidth=4 tabstop=4 softtabstop=4<br>set expandtab<br>set autoindent</p>
-<p>set fileformat=unix<br>set fenc=utf-8</p>
-<p>set t_Co=256</p>
-<p>let g:indentLine_char=’|’<br>let g:indentLine_enabled=1</p>
-<p>let g:ycm_python_binary_path = ‘python’</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/07/vimrc/" data-id="cjj0zf3i900026ssgtza87m6a" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/07/hello-world/" class="article-date">
-  <time datetime="2018-06-07T04:28:54.027Z" itemprop="datePublished">2018-06-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/07/hello-world/" data-id="cjj0zf3hz00016ssgxsgjbozq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
