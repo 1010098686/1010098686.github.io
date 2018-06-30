@@ -14,14 +14,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Squeeze-and-Excitation NetworksIntroduction最近的工作都是通过引入不需要额外监督信息就可以获得更好的空间信息的的方法来提升网络的性能，例如Inception network引入多尺度信息。而SENet的目标是通过建模卷积通道之间的依赖关系来加强网络的表示能力，提出了一种特征重标定策略，通过学习到全局信息来加强有用的特征并抑制无用的特征。  对于一个给定的变">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/SENet/img1.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/SENet/img2.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/SENet/img3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/img1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/img2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/30/SENet/img3.jpg">
 <meta property="og:updated_time" content="2018-06-30T05:43:58.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SENet">
 <meta name="twitter:description" content="Squeeze-and-Excitation NetworksIntroduction最近的工作都是通过引入不需要额外监督信息就可以获得更好的空间信息的的方法来提升网络的性能，例如Inception network引入多尺度信息。而SENet的目标是通过建模卷积通道之间的依赖关系来加强网络的表示能力，提出了一种特征重标定策略，通过学习到全局信息来加强有用的特征并抑制无用的特征。  对于一个给定的变">
-<meta name="twitter:image" content="http://yoursite.com/2018/06/30/SENet/SENet/img1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/30/SENet/img1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -91,7 +91,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Squeeze-and-Excitation-Networks"><a href="#Squeeze-and-Excitation-Networks" class="headerlink" title="Squeeze-and-Excitation Networks"></a>Squeeze-and-Excitation Networks</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>最近的工作都是通过引入不需要额外监督信息就可以获得更好的空间信息的的方法来提升网络的性能，例如Inception network引入多尺度信息。而SENet的目标是通过建模卷积通道之间的依赖关系来加强网络的表示能力，提出了一种特征重标定策略，通过学习到全局信息来加强有用的特征并抑制无用的特征。</p>
-<p><img src="SENet/img1.jpg" alt="SE Block的结构"></p>
+<p><img src="/2018/06/30/SENet/img1.jpg" alt="SE Block的结构"></p>
 <p>对于一个给定的变换$X \rightarrow U,x \in \mathscr{R}^{W’<em>H’</em>C’}, U \in \mathscr{R}^{W<em>H</em>C}$, SE Block可以进行特征重标定。U的特征首先被送入一个squeeze操作中，顺着空间维度来产生一个通道描述符，这个通道描述符表示着通道相应上的全局分布，具有全局感受野。然后是excitation操作，通过参数为每一个通道产生一个权重，其中的参数通过门机制来学习得到，可以描述特征通道之间的相关性。U的特征最后会被reweight来产生SE Block的输出。</p>
 <p>SE Block可以在网络中的任意深度的层中使用，但是他在不用深度的层中扮演的作用是适应不同的需要的。在较浅的层中，他加强了类别无关的低层特征表示的效果，在较深的层中，SE Block对每一个具体的类的不同输入进行响应。</p>
 <h2 id="Squeeze操作"><a href="#Squeeze操作" class="headerlink" title="Squeeze操作"></a>Squeeze操作</h2><p>每一个学习到的卷积核都是在一个局部的感受野上进行操作所以卷积的输出不能利用这个感受野之外的上下文信息，这个问题在网络较浅层更为明显，因为其感受野很小。Squeeze操作可以缓解这个问题。squeeze操作的实现使用了global average pooling使得SE Block可以获得全局的空间信息。</p>
@@ -99,13 +99,13 @@
 <blockquote>
 <p>To fulfil this objective, the function must meet two criteria: first, it must be flexible (in particular, it must be capable of learning a nonlinear interaction between channels) and second, it must learn a non-mutually-exclusive relationship as multiple channels are allowed to be emphasised opposed to one<br>hot activation</p>
 </blockquote>
-<h2 id="SE-Block的例子"><a href="#SE-Block的例子" class="headerlink" title="SE Block的例子"></a>SE Block的例子</h2><p><img src="SENet/img2.jpg" alt="SE-Inception Block"></p>
-<p><img src="SENet/img3.jpg" alt="SE-Resnet Block"></p>
+<h2 id="SE-Block的例子"><a href="#SE-Block的例子" class="headerlink" title="SE Block的例子"></a>SE Block的例子</h2><p><img src="/2018/06/30/SENet/img2.jpg" alt="SE-Inception Block"></p>
+<p><img src="/2018/06/30/SENet/img3.jpg" alt="SE-Resnet Block"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/30/SENet/" data-id="cjj0zf3ht00006ssgex38ukn0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/30/SENet/" data-id="cjj0zu028000068sgmasa45va" class="article-share-link">Share</a>
       
       
     </footer>
